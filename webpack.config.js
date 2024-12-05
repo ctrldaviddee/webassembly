@@ -2,6 +2,8 @@ const path = require('path')
 const htmlwbp = require('html-webpack-plugin')
 const wasmwbp = require('@wasm-tool/wasm-pack-plugin')
 const { experiments } = require('webpack')
+
+
 module.exports = {
     entry: './public/main.js',
 
