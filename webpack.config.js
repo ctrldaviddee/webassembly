@@ -1,6 +1,7 @@
 const path = require('path')
-const htmlwp = require('html-webpack-plugin')
-
+const htmlwbp = require('html-webpack-plugin')
+const wasmwbp = require('@wasm-tool/wasm-pack-plugin')
+const { experiments } = require('webpack')
 module.exports = {
     entry: './public/main.js',
 
@@ -11,8 +12,16 @@ module.exports = {
     },
 
     plugins: [
-        new htmlwp({
+        new htmlwbp({
             template: './public/index.html'
+        }),
+
+        new wasmwbp({
+            crateDirectory: path.resolve(__dirname, '.')
         })
-    ]
+    ],
+
+    experiments: {
+        asyncWebAssembly: true,
+    }
 }

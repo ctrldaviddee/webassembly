@@ -1,1 +1,10 @@
 webpack is a took for optimizing javascript projects. Developing an application takes hundreds of files. Splitting the project into seperate files is great for development. But in production, it's not ideal. Downloading a web app should be as fast as possible. To guarantee the fastest download time. The app size should be small. Web pack can help by minifyin, concatenating and optimizing our projects. Projects can go from hundreds of files to about a dozen files. But wait, webpack can compile other languages like rust. We are going to use webpack to automate the process of compiling our code. It's going to take a lot of work to get the desired behaviour but it's going to be worth it. Anytime we make changes to our project webpack will automatically compile our code.
+
+wasm bindgen will help us export rust functions to js. we could write the code ourselves but why reinvent the wheel?
+
+import a wasm file is the same as importing a js file.
+it is an async operation. therefore we shoul add the async keyword to the initialize function.
+
+buffers are a feature sor temporarily storing data.
+
+![process illustration](image.png)
